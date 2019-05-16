@@ -1,0 +1,46 @@
+StringBuilder result = new StringBuilder();
+String newline = System.getProperty("line.separator");
+int max = Integer.parseInt(Parameters);
+Random random = new Random();
+
+result.append("{");
+result.append(newline);
+result.append("\"customer\" : {");
+result.append(newline);
+result.append("\"customerId\" : ").append(random.nextInt(9999999)).append(",");
+result.append(newline);
+result.append("\"name\" : ").append("\"").append("Max Mustermann").append("\",");
+result.append(newline);
+result.append("\"street\" : ").append("\"").append("Musterstrasse 123").append("\",");
+result.append(newline);
+result.append("\"zipCode\" : ").append("\"").append("12345").append("\",");
+result.append(newline);
+result.append("\"city\" : ").append("\"").append("Musterstadt").append("\",");
+result.append(newline);
+result.append("\"country\" : ").append("\"").append("Germany").append("\"");
+result.append(newline).append("},");
+result.append(newline);
+result.append("\"orderItems\" : [");
+for (int i = 0; i < max; i++) {
+    result.append("{");
+    result.append(newline);
+    result.append("\"productId\" : ").append(random.nextInt(9999999)).append(",");;
+    result.append(newline);
+    result.append("\"itemDescription\" : ").append("\"").append("DESCRIPTION").append("\",");
+    result.append(newline);
+    result.append("\"amount\" : ").append(random.nextInt(30)).append(",");
+    result.append(newline);
+    result.append("\"itemPrice\" : ").append(random.nextDouble()*10);
+    if (i < max - 1) {
+       result.append(newline).append("}, ");
+    } else {
+    	  result.append(newline).append("}");
+    }
+}
+result.append("],");
+result.append(newline);
+result.append("\"orderDate\" : ").append(new Date().getTime());
+result.append(newline);
+result.append("}");
+
+vars.put("requestMessage", result.toString());

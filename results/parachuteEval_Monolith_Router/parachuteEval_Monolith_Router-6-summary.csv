@@ -1,0 +1,8 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+Warmup:Trigger PDF Generation,10000,29,7,188,14.07,0.000%,159.53798,301.02,245.24,1932.1
+Burst1:Trigger PDF Generation,5000,30,7,370,20.32,0.000%,158.09277,298.29,243.04,1932.1
+Burst2:Trigger PDF Generation,10000,29,7,251,15.11,0.000%,161.68410,305.09,248.55,1932.2
+Burst3:Trigger PDF Generation,20000,29,7,275,15.19,0.000%,160.93859,303.69,247.41,1932.3
+Burst4:Trigger PDF Generation,40000,29,7,385,15.25,0.000%,160.92629,303.66,247.38,1932.2
+Burst5:Trigger PDF Generation,80000,30,7,428,16.04,0.000%,160.88325,303.56,247.32,1932.1
+TOTAL,165000,29,7,428,15.73,0.000%,160.71564,303.25,247.06,1932.2
